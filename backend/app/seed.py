@@ -47,7 +47,12 @@ SEED_ROWS: dict[str, list[dict[str, Any]]] = {
     "file_drop": [
   {"id": 1, "status": "待归集", "pending": True, "abnormal": False, "关联执行": "文件归集样例1", "字节大小": "1024", "归集时间": "2026-09-01", "归集目录": "文件归集样例1", "归集编号": "FILE-0001", "文件名称": "文件归集样例1", "文件类型": "文件归集样例1", "校验值": "abcdef000001"},
   {"id": 2, "status": "已归集", "pending": True, "abnormal": True, "关联执行": "文件归集样例2", "字节大小": "4096", "归集时间": "2026-09-02", "归集目录": "文件归集样例2", "归集编号": "FILE-0002", "文件名称": "文件归集样例2", "文件类型": "文件归集样例2", "校验值": "abcdef000002"},
-  {"id": 3, "status": "校验不符", "pending": False, "abnormal": False, "关联执行": "文件归集样例3", "字节大小": "3072", "归集时间": "2026-09-03", "归集目录": "文件归集样例3", "归集编号": "FILE-0003", "文件名称": "文件归集样例3", "文件类型": "文件归集样例3", "校验值": "abcdef000003"}
+  {"id": 3, "status": "校验不符", "pending": False, "abnormal": False, "关联执行": "文件归集样例3", "字节大小": "3072", "归集时间": "2026-09-03", "归集目录": "文件归集样例3", "归集编号": "FILE-0003", "文件名称": "文件归集样例3", "文件类型": "文件归集样例3", "校验值": "abcdef000003"},
+  {"id": 4, "status": "已归集", "pending": False, "abnormal": False, "关联执行": "RUN-V1-FULL", "字节大小": "2048", "归集时间": "2026-11-20T08:00:00", "归集目录": "/captures/run_v1_full", "归集编号": "FILE-V1F-1", "文件名称": "full_orders.csv", "文件类型": "text/csv", "校验值": "sha256_full_orders_001"},
+  {"id": 5, "status": "已归集", "pending": False, "abnormal": False, "关联执行": "RUN-V1-FULL", "字节大小": "1024", "归集时间": "2026-11-20T08:05:00", "归集目录": "/captures/run_v1_full", "归集编号": "FILE-V1F-2", "文件名称": "full_items.csv", "文件类型": "text/csv", "校验值": "sha256_full_items_002"},
+  {"id": 6, "status": "已归集", "pending": False, "abnormal": False, "关联执行": "RUN-V1-FULL", "字节大小": "512", "归集时间": "2026-11-20T08:10:00", "归集目录": "/captures/run_v1_full", "归集编号": "FILE-V1F-3", "文件名称": "full_manifest.json", "文件类型": "application/json", "校验值": "sha256_full_manifest_003"},
+  {"id": 7, "status": "已归集", "pending": False, "abnormal": False, "关联执行": "RUN-V1-GAP", "字节大小": "2048", "归集时间": "2026-11-21T08:00:00", "归集目录": "/captures/run_v1_gap", "归集编号": "FILE-V1G-1", "文件名称": "gap_orders.csv", "文件类型": "text/csv", "校验值": "sha256_gap_orders_001"},
+  {"id": 8, "status": "已归集", "pending": False, "abnormal": False, "关联执行": "RUN-V1-GAP", "字节大小": "1024", "归集时间": "2026-11-21T08:05:00", "归集目录": "/captures/run_v1_gap", "归集编号": "FILE-V1G-2", "文件名称": "gap_items.csv", "文件类型": "text/csv", "校验值": "sha256_gap_items_002"}
 ],
     "ocr_region": [
   {"id": 1, "status": "待标定", "pending": True, "abnormal": False, "关联模板": "识别区域样例1", "区域名称": "识别区域样例1", "区域编号": "OCR_-0001", "坐标范围": "识别区域样例1", "平均置信度": "0.65", "最近识别": "识别区域样例1", "识别引擎": "tesseract", "语言设定": "zh-CN"},
@@ -72,7 +77,9 @@ SEED_ROWS: dict[str, list[dict[str, Any]]] = {
     "capture_batch": [
   {"id": 1, "status": "归集中", "pending": True, "abnormal": False, "上游来源": "采集批次样例1", "关联执行": "FLOW-0001", "完整性校验": "sha256_abcd1", "批次标签": "采集批次样例1", "批次编号": "CAPT-0001", "生成时间": "2026-09-01", "记录行数": "15", "采集窗口": "采集批次样例1"},
   {"id": 2, "status": "校验中", "pending": True, "abnormal": True, "上游来源": "采集批次样例2", "关联执行": "FLOW-0002", "完整性校验": "sha256_abcd2", "批次标签": "采集批次样例2", "批次编号": "CAPT-0002", "生成时间": "2026-09-02", "记录行数": "30", "采集窗口": "采集批次样例2"},
-  {"id": 3, "status": "已确认", "pending": False, "abnormal": False, "上游来源": "采集批次样例3", "关联执行": "FLOW-0003", "完整性校验": "sha256_abcd3", "批次标签": "采集批次样例3", "批次编号": "CAPT-0003", "生成时间": "2026-09-03", "记录行数": "45", "采集窗口": "采集批次样例3"}
+  {"id": 3, "status": "已确认", "pending": False, "abnormal": False, "上游来源": "采集批次样例3", "关联执行": "FLOW-0003", "完整性校验": "sha256_abcd3", "批次标签": "采集批次样例3", "批次编号": "CAPT-0003", "生成时间": "2026-09-03", "记录行数": "45", "采集窗口": "采集批次样例3"},
+  {"id": 4, "status": "已确认", "pending": False, "abnormal": False, "上游来源": "RUN-V1-FULL:4", "关联执行": "RUN-V1-FULL", "完整性校验": "sha256_batch_v1_full", "批次标签": "legacy-v1", "批次编号": "CAPT-V1-FULL", "生成时间": "2026-11-20T08:30:00", "记录行数": "120", "采集窗口": "[2026-11-20]"},
+  {"id": 5, "status": "已确认", "pending": False, "abnormal": False, "上游来源": "RUN-V1-GAP:5", "关联执行": "RUN-V1-GAP", "完整性校验": "sha256_batch_v1_gap", "批次标签": "legacy-v1", "批次编号": "CAPT-V1-GAP", "生成时间": "2026-11-21T08:30:00", "记录行数": "80", "采集窗口": "[2026-11-21]"}
 ],
     "field_mapping": [
   {"id": 1, "status": "草稿", "pending": True, "abnormal": False, "映射版本": "字段映射样例1", "映射编号": "FIEL-0001", "最近生效": "字段映射样例1", "来源字段": "source_field_1", "目标字段": "target_field_1", "空值策略": "skip", "类型声明": "字段映射样例1", "转换函数": "strip"},
@@ -112,6 +119,8 @@ SEED_ROWS: dict[str, list[dict[str, Any]]] = {
     "handoff_pack": [
   {"id": 1, "status": "待打包", "pending": True, "abnormal": False, "交接时间": "2026-09-01", "交接版本": "交接包样例1", "交接编号": "HAND-0001", "关联批次": "交接包样例1", "校验摘要": "sha256_handoff1", "清单文件数": "3", "目标系统": "交接包样例1", "记录行数": "50"},
   {"id": 2, "status": "打包中", "pending": True, "abnormal": True, "交接时间": "2026-09-02", "交接版本": "交接包样例2", "交接编号": "HAND-0002", "关联批次": "交接包样例2", "校验摘要": "sha256_handoff2", "清单文件数": "6", "目标系统": "交接包样例2", "记录行数": "100"},
-  {"id": 3, "status": "已交接", "pending": False, "abnormal": False, "交接时间": "2026-09-03", "交接版本": "交接包样例3", "交接编号": "HAND-0003", "关联批次": "交接包样例3", "校验摘要": "sha256_handoff3", "清单文件数": "9", "目标系统": "交接包样例3", "记录行数": "150"}
+  {"id": 3, "status": "已交接", "pending": False, "abnormal": False, "交接时间": "2026-09-03", "交接版本": "交接包样例3", "交接编号": "HAND-0003", "关联批次": "交接包样例3", "校验摘要": "sha256_handoff3", "清单文件数": "9", "目标系统": "交接包样例3", "记录行数": "150"},
+  {"id": 4, "status": "已交接", "pending": False, "abnormal": False, "交接时间": "2026-11-20T09:00:00", "交接版本": "v1", "交接编号": "HAND-V1-FULL", "关联批次": "CAPT-V1-FULL", "校验摘要": "sha256_legacy_full_pack", "清单文件数": "3", "目标系统": "datalake_downstream", "记录行数": "120"},
+  {"id": 5, "status": "已交接", "pending": False, "abnormal": False, "交接时间": "2026-11-21T09:00:00", "交接版本": "v1", "交接编号": "HAND-V1-GAP", "关联批次": "CAPT-V1-GAP", "校验摘要": "sha256_legacy_gap_pack", "清单文件数": "3", "目标系统": "datalake_downstream", "记录行数": "80"}
 ]
 }
